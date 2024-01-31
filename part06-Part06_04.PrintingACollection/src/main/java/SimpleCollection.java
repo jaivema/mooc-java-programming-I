@@ -21,14 +21,22 @@ public class SimpleCollection {
 
     @Override
     public String toString() {
-        if (this.getElements().size()==0){
-            return "The collection "+ name +" is empty.";
-        }else if (this.getElements().size()==1){
-            return "The collection "+ name +" has "+ elements.size() +" element:\n"+ 
-                    this.getElements();
+        String outPrint = "";
+        String outElements = "";
+        
+        if (elements.isEmpty()){
+            outPrint = "The collection "+ name +" is empty.";
+            
+        }else 
+            if (elements.size()==1){
+                outPrint = "The collection "+ name +" has "+ elements.size() +" element:\n"; 
+                outElements = elements.get(0);
             }else{
-                return "The collection "+ name +" has "+ elements.size() +" elements:\n"+ 
-                        elements;
-        }
+                outPrint = "The collection "+ name +" has "+ elements.size() +" elements:\n";
+                for (String element : elements) {
+                    outElements = outElements + element +"\n";
+                }
+            }
+        return outPrint + outElements;
     }
 }
