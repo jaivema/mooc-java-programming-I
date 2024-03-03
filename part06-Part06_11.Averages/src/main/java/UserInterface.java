@@ -12,6 +12,18 @@ public class UserInterface {
     }
 
     public void start() {
+// Part 1 Average grade.
+//        GradeRegister register = new GradeRegister();
+//        register.addGradeBasedOnPoints(93);
+//        register.addGradeBasedOnPoints(91);
+//        register.addGradeBasedOnPoints(92);
+//      
+//        System.out.println("avg of grades: "+ register.averageOfGrades());
+
+// Part 2
+//        System.out.println("avg of points: "+ register.averageOfPoints());
+
+//Normal function
         readPoints();
         System.out.println("");
         printGradeDistribution();
@@ -46,7 +58,10 @@ public class UserInterface {
 
             grade = grade - 1;
         }
-        
+
+//Part 3        
+        System.out.println("The average of points: " + this.register.averageOfPoints());
+        System.out.println("The average of grades: " + this.register.averageOfGrades());
     }
 
     public static void printsStars(int stars) {

@@ -31,7 +31,9 @@ public class Stack {
     
     public String take(){
         String getLast = (String)list.get(list.size()-1);
+        
         list.remove(getLast); 
+        
         return getLast;
     }
 }
